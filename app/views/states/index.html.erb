@@ -1,0 +1,15 @@
+<h1>Listing Regions</h1>
+ 
+<%= link_to 'Home', root_path %> | 
+<%= link_to 'Breweries', controller: 'articles' %>
+
+<table>
+  <tr>
+    <th>Region</th>
+  </tr>
+ 
+  <% @locations.each do |location| %>
+    <tr>
+      <td><%= link_to location[1]['name'] %></td>
+  <% end %>
+</table>

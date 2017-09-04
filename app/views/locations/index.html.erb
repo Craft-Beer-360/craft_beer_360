@@ -10,6 +10,6 @@
  
   <% @locations.each do |location| %>
     <tr>
-      <td><%= link_to location[1]['name'] %></td>
+      <td><%= link_to location[1]['name'], state_path(location[1]['name']) %></td>
   <% end %>
 </table>
