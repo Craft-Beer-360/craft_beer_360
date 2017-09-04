@@ -1,0 +1,7 @@
+<h1>Edit Brewery</h1>
+
+<%= link_to 'Home', root_path %> | 
+<%= link_to 'Breweries', articles_path %> | 
+<%= link_to 'Cancel', request.referer.present? ? request.referer : default_path %>
+ 
+<%= render 'form' %>

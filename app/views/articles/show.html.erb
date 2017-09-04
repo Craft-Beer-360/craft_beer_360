@@ -1,0 +1,24 @@
+<%= link_to 'Home', root_path %> | 
+<%= link_to 'Breweries', articles_path %> | 
+<%= link_to 'New Brewery', new_article_path %> | 
+<%= link_to 'Edit', edit_article_path %> |
+<%= link_to 'Delete', article_path,
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %> | 
+<%= link_to 'Back', articles_path %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @article.title %>
+</p>
+ 
+<p>
+  <strong>Location:</strong>
+  <%= @article.text %>
+</p>
+
+<h2>Comments</h2>
+<%= render @article.comments %>
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
